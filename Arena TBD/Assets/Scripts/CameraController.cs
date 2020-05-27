@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class CameraController : MonoBehaviour
+public class CameraController : NetworkBehaviour
 {
     private GameObject mainCam;
     public float xPosition, yPosition, zPosition;
@@ -16,6 +17,10 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
         cameraMove();
     }
 

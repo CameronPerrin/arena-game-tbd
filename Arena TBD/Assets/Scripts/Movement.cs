@@ -23,6 +23,7 @@ public class Movement : NetworkBehaviour
         {
             return;
         }
+
         if (Input.GetKey("d"))
         {
             transform.Translate(moveSpeed * Time.deltaTime, 0, 0, Space.World);
