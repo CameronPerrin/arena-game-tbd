@@ -7,34 +7,35 @@ using UnityEngine.Networking;
 
 public class PlayerHealthController : NetworkBehaviour
 {
-	public int health = 100;
+	public int health;
 	public TMP_Text healthBox;
 	public GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-
+    	health = 100;
     }
 
     // Update is called once per frame
     void Update()
     {
-    	if (!isLocalPlayer)
-        {
-            return;
-        }
+    	if(!isServer){
+    		return;
+    	}
 		healthBox.text = health.ToString();
-		if(Input.GetMouseButtonDown(0)){
-			health = health - 5; 
-		}
+		TakeDamage();
 		if(health <= 0){
 			Destroy(player);
 		}
     }
 
     void TakeDamage()
-    {
+    {	
 
+
+		if(Input.GetMouseButtonDown(0)){
+			health -= 5; 
+		}
     }
 }
