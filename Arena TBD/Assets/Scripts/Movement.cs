@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Movement : MonoBehaviour
+public class Movement : NetworkBehaviour
 {
     public float moveSpeed = 5f;
     public float horizontalSpeed = 2.0F;
@@ -18,6 +19,10 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!isLocalPlayer)
+        {
+            return;
+        }
         if (Input.GetKey("d"))
         {
             transform.Translate(moveSpeed * Time.deltaTime, 0, 0, Space.World);
