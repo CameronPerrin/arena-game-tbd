@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Networking;
 
-public class PlayerHealthController : MonoBehaviour
+public class PlayerHealthController : NetworkBehaviour
 {
 	public int health = 100;
 	public TMP_Text healthBox;
@@ -19,6 +20,10 @@ public class PlayerHealthController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    	if (!isLocalPlayer)
+        {
+            return;
+        }
 		healthBox.text = health.ToString();
 		if(Input.GetMouseButtonDown(0)){
 			health = health - 5; 
