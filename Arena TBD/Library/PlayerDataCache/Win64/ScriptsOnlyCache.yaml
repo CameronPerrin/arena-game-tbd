@@ -2,7 +2,9 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Billboard
+    - BulletOC
     - CameraController
+    - DealDamage
     - Movement
     - PlayerHealthController
     Unity.Rider.Editor.dll:
@@ -81,23 +83,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11566}
     - Class: 114
-      Script: {instanceID: 12024}
+      Script: {instanceID: 11580}
     - Class: 114
-      Script: {instanceID: 12344}
+      Script: {instanceID: 12026}
     - Class: 114
-      Script: {instanceID: 12524}
+      Script: {instanceID: 12346}
     - Class: 114
-      Script: {instanceID: 12748}
+      Script: {instanceID: 12526}
     - Class: 114
-      Script: {instanceID: 12766}
+      Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 13018}
+      Script: {instanceID: 12752}
     - Class: 114
-      Script: {instanceID: 13064}
+      Script: {instanceID: 12770}
     - Class: 114
-      Script: {instanceID: 13240}
+      Script: {instanceID: 13022}
     - Class: 114
-      Script: {instanceID: 13422}
+      Script: {instanceID: 13068}
+    - Class: 114
+      Script: {instanceID: 13244}
+    - Class: 114
+      Script: {instanceID: 13426}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -133,7 +139,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 559ededf2dc9b83b4c28a7c4b4cbafe3
+      Hash: bb7a71457205bd25c20e5037fec7e80a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Movement
@@ -275,6 +281,12 @@ ScriptsOnlyBuild:
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
     className: NetworkTransform
+  - hash:
+      serializedVersion: 2
+      Hash: 71b8b04a9697bff08fb5c69fd54082e2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BulletOC
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
@@ -521,6 +533,12 @@ ScriptsOnlyBuild:
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
     className: NetworkStartPosition
+  - hash:
+      serializedVersion: 2
+      Hash: 08e71239e16769f5ca191b7d1a764403
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DealDamage
   - hash:
       serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd

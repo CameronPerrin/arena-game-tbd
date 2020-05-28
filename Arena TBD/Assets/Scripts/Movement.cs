@@ -68,22 +68,12 @@ public class Movement : NetworkBehaviour
 
             transform.LookAt(new Vector3(target.x, transform.position.y, target.z));
         }
-
-        // Do damage to self
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            CmdTakeDamage();
-        }
     }
 
+    // Change player color
     public override void OnStartLocalPlayer()
     {
         GetComponent<MeshRenderer>().material.color = Color.yellow;
     }
 
-    [Command]
-    void CmdTakeDamage()
-    {
-        gameObject.GetComponent<PlayerHealthController>().TakeDamage(5);
-    }
 }
