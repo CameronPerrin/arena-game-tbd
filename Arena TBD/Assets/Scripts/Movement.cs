@@ -9,39 +9,31 @@ public class Movement : NetworkBehaviour
     public float horizontalSpeed = 2.0F;
     public float verticalSpeed = 2.0F;
 
-
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!isLocalPlayer)
+        if (!isLocalPlayer)
         {
             return;
         }
 
+        // Player movement
         if (Input.GetKey("d"))
-        {
             transform.Translate(moveSpeed * Time.deltaTime, 0, 0, Space.World);
-        }
         if (Input.GetKey("a"))
-        {
             transform.Translate(-moveSpeed * Time.deltaTime, 0, 0, Space.World);
-        }
         if (Input.GetKey("w"))
-        {
             transform.Translate(0, 0, moveSpeed * Time.deltaTime, Space.World);
-        }
         if (Input.GetKey("s"))
-        {
             transform.Translate(0, 0, -moveSpeed * Time.deltaTime, Space.World);
-        }
 
-
+        // Camera Look
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); ;
         RaycastHit hit;
 
@@ -54,5 +46,22 @@ public class Movement : NetworkBehaviour
 
             transform.LookAt(new Vector3(target.x, transform.position.y, target.z));
         }
+
+        // Do damage to self
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            CmdTakeDamage();
+        }
+    }
+
+    public override void OnStartLocalPlayer()
+    {
+        GetComponent<MeshRenderer>().material.color = Color.yellow;
+    }
+
+    [Command]
+    void CmdTakeDamage()
+    {
+        gameObject.GetComponent<PlayerHealthController>().TakeDamage(5);
     }
 }

@@ -1,41 +1,37 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
-using TMPro;
 using UnityEngine.Networking;
+
 
 public class PlayerHealthController : NetworkBehaviour
 {
-	public int health;
-	public TMP_Text healthBox;
-	public GameObject player;
+    public const int maxHealth = 100;
+    [SyncVar(hook = "OnChangeHealth")] public int currentHealth = maxHealth;
+    public RectTransform healthbar;
 
-    // Start is called before the first frame update
-    void Start()
+
+    public void TakeDamage(int amount)
     {
-    	health = 100;
+        Debug.Log("Entered code!");
+        if (!isServer)
+        {
+            return;
+        }
+        Debug.Log("Passed server test!");
+        currentHealth -= amount;
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            Debug.Log("Dead");
+        }
+        Debug.Log("Took Damage!");
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnChangeHealth(int health)
     {
-    	if(!isServer){
-    		return;
-    	}
-		healthBox.text = health.ToString();
-		TakeDamage();
-		if(health <= 0){
-			Destroy(player);
-		}
-    }
-
-    void TakeDamage()
-    {	
-
-
-		if(Input.GetMouseButtonDown(0)){
-			health -= 5; 
-		}
+        Debug.Log("HEALTH CHANGING");
+        healthbar.sizeDelta = new Vector2(health * 2, healthbar.sizeDelta.y);
+        currentHealth = health;
     }
 }
