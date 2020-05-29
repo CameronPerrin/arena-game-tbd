@@ -486,7 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3c360f885c1a541a62d78c4a436caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theName: 
+  passedName: 
   inputField: {fileID: 0}
 --- !u!4 &1598473604
 Transform:
