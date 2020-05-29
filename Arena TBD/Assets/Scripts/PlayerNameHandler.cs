@@ -18,7 +18,6 @@ public class PlayerNameHandler : NetworkBehaviour
     [Command]
     public void CmdChangeName(string newName)
     {
-        Debug.Log("Entered Name Change function");
         playerName = newName;
     }
 
@@ -34,7 +33,11 @@ public class PlayerNameHandler : NetworkBehaviour
 
     void Update()
     {
-        nameText.GetComponent<TextMesh>().text = playerName;
+        if (nameText.GetComponent<TextMesh>().text != playerName)
+        {
+            Debug.Log("Name changed");
+            nameText.GetComponent<TextMesh>().text = playerName;
+        }
     }
 
 }
