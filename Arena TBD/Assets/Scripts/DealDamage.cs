@@ -24,8 +24,6 @@ public class DealDamage : NetworkBehaviour
             return;
         }
 
-
-
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             CmdDoDamage();
@@ -36,9 +34,11 @@ public class DealDamage : NetworkBehaviour
     {
         GameObject bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
 
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 30.0f;
+
         NetworkServer.Spawn(bullet);
 
-        Destroy(bullet, 0.1f);
+        Destroy(bullet, 3f);
 
         // hurt self
         //gameObject.GetComponent<PlayerHealthController>().TakeDamage(5);
