@@ -78,37 +78,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11256}
+      Script: {instanceID: 12174}
     - Class: 114
-      Script: {instanceID: 11258}
+      Script: {instanceID: 12176}
     - Class: 114
-      Script: {instanceID: 11324}
+      Script: {instanceID: 12242}
     - Class: 114
-      Script: {instanceID: 11480}
+      Script: {instanceID: 12398}
     - Class: 114
-      Script: {instanceID: 11516}
+      Script: {instanceID: 12434}
     - Class: 114
-      Script: {instanceID: 11566}
+      Script: {instanceID: 12484}
     - Class: 114
-      Script: {instanceID: 11580}
+      Script: {instanceID: 12498}
     - Class: 114
-      Script: {instanceID: 12346}
+      Script: {instanceID: 13264}
     - Class: 114
-      Script: {instanceID: 12410}
+      Script: {instanceID: 13328}
     - Class: 114
-      Script: {instanceID: 12528}
+      Script: {instanceID: 13446}
     - Class: 114
-      Script: {instanceID: 12704}
+      Script: {instanceID: 13622}
     - Class: 114
-      Script: {instanceID: 13026}
+      Script: {instanceID: 13942}
     - Class: 114
-      Script: {instanceID: 13072}
+      Script: {instanceID: 13988}
     - Class: 114
-      Script: {instanceID: 13330}
+      Script: {instanceID: 14246}
     - Class: 114
-      Script: {instanceID: 13432}
+      Script: {instanceID: 14348}
     - Class: 114
-      Script: {instanceID: 13472}
+      Script: {instanceID: 14388}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -153,33 +153,33 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11256}
+      Script: {instanceID: 12174}
     - Class: 114
-      Script: {instanceID: 11468}
+      Script: {instanceID: 12386}
     - Class: 114
-      Script: {instanceID: 11516}
+      Script: {instanceID: 12434}
     - Class: 114
-      Script: {instanceID: 11992}
+      Script: {instanceID: 12910}
     - Class: 114
-      Script: {instanceID: 12026}
+      Script: {instanceID: 12944}
     - Class: 114
-      Script: {instanceID: 12492}
+      Script: {instanceID: 13410}
     - Class: 114
-      Script: {instanceID: 12716}
+      Script: {instanceID: 13634}
     - Class: 114
-      Script: {instanceID: 12754}
+      Script: {instanceID: 13672}
     - Class: 114
-      Script: {instanceID: 12772}
+      Script: {instanceID: 13690}
     - Class: 114
-      Script: {instanceID: 12994}
+      Script: {instanceID: 13910}
     - Class: 114
-      Script: {instanceID: 13072}
+      Script: {instanceID: 13988}
     - Class: 114
-      Script: {instanceID: 13248}
+      Script: {instanceID: 14164}
     - Class: 114
-      Script: {instanceID: 13472}
+      Script: {instanceID: 14388}
     - Class: 114
-      Script: {instanceID: 13508}
+      Script: {instanceID: 14424}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -891,4 +891,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Arena.unity
-  playerPath: C:/Users/Josh/Desktop/ARENA BUILD/Arena TBD.exe
+  playerPath: C:/Users/Cameron_Desktop/Downloads/Arena TBD.exe

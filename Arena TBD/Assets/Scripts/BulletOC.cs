@@ -13,14 +13,17 @@ public class BulletOC : NetworkBehaviour
     {
         GameObject hit = collision.gameObject;
         PlayerHealthController health = hit.GetComponent<PlayerHealthController>();
-       // hit.GetComponent<Rigidbody>().AddForce(transform.forward * 500f);
-       // hit.GetComponent<Rigidbody>().AddForce(-transform.up * 100f);
 
 
-        if (health != null)
+        if (health != null && hit.tag == "Player")
         {   
                 health.TakeDamage(dmg);
+                //hit.GetComponent<Rigidbody>().AddForce(transform.forward * 500f);
+                hit.GetComponent<Rigidbody>().AddForce(transform.up * 750f);
         }
-        Destroy(gameObject);
+        gameObject.transform.localScale = new Vector3(10f, 10f, 10f);
+        gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
+        gameObject.GetComponent<Rigidbody>().useGravity = false;
+        //Destroy(gameObject);
     }
 }
