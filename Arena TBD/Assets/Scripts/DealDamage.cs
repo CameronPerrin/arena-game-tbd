@@ -38,7 +38,7 @@ public class DealDamage : NetworkBehaviour
 
         NetworkServer.Spawn(bullet);
 
-        Destroy(bullet, 3f);
+        Destroy(bullet, 1.2f);
 
         // hurt self
         //gameObject.GetComponent<PlayerHealthController>().TakeDamage(5);
