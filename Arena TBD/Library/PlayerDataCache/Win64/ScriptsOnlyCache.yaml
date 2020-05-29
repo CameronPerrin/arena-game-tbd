@@ -17,6 +17,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -28,9 +29,14 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.InputField
+    - UnityEngine.UI.Text
     com.unity.multiplayer-hlapi.Runtime.dll:
     - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
@@ -57,8 +63,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
     - Class: 64
@@ -73,48 +77,38 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
-    - Class: 109
-      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11260}
+      Script: {instanceID: 11256}
     - Class: 114
-      Script: {instanceID: 11262}
+      Script: {instanceID: 11258}
     - Class: 114
-      Script: {instanceID: 11328}
+      Script: {instanceID: 11324}
     - Class: 114
-      Script: {instanceID: 11484}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11520}
+      Script: {instanceID: 11516}
     - Class: 114
-      Script: {instanceID: 11570}
+      Script: {instanceID: 11566}
     - Class: 114
-      Script: {instanceID: 11584}
+      Script: {instanceID: 11580}
     - Class: 114
-      Script: {instanceID: 12030}
+      Script: {instanceID: 12346}
     - Class: 114
-      Script: {instanceID: 12350}
+      Script: {instanceID: 12410}
     - Class: 114
-      Script: {instanceID: 12414}
+      Script: {instanceID: 12528}
     - Class: 114
-      Script: {instanceID: 12532}
+      Script: {instanceID: 12704}
     - Class: 114
-      Script: {instanceID: 12708}
+      Script: {instanceID: 13026}
     - Class: 114
-      Script: {instanceID: 12758}
+      Script: {instanceID: 13072}
     - Class: 114
-      Script: {instanceID: 12776}
+      Script: {instanceID: 13330}
     - Class: 114
-      Script: {instanceID: 13030}
+      Script: {instanceID: 13432}
     - Class: 114
-      Script: {instanceID: 13076}
-    - Class: 114
-      Script: {instanceID: 13252}
-    - Class: 114
-      Script: {instanceID: 13334}
-    - Class: 114
-      Script: {instanceID: 13436}
-    - Class: 114
-      Script: {instanceID: 13476}
+      Script: {instanceID: 13472}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -122,6 +116,73 @@ ScriptsOnlyBuild:
     - Class: 135
       Script: {instanceID: 0}
     - Class: 136
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Menu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 109
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11256}
+    - Class: 114
+      Script: {instanceID: 11468}
+    - Class: 114
+      Script: {instanceID: 11516}
+    - Class: 114
+      Script: {instanceID: 11992}
+    - Class: 114
+      Script: {instanceID: 12026}
+    - Class: 114
+      Script: {instanceID: 12492}
+    - Class: 114
+      Script: {instanceID: 12716}
+    - Class: 114
+      Script: {instanceID: 12754}
+    - Class: 114
+      Script: {instanceID: 12772}
+    - Class: 114
+      Script: {instanceID: 12994}
+    - Class: 114
+      Script: {instanceID: 13072}
+    - Class: 114
+      Script: {instanceID: 13248}
+    - Class: 114
+      Script: {instanceID: 13472}
+    - Class: 114
+      Script: {instanceID: 13508}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -690,7 +751,7 @@ ScriptsOnlyBuild:
     className: NetworkAnimator
   - hash:
       serializedVersion: 2
-      Hash: 776c1acddd3c4115e7276536100919e4
+      Hash: f3d75b348405e81bdeca546bcfabeff5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerNameHandler
@@ -828,5 +889,6 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 19
   scenePathNames:
+  - Assets/Scenes/Menu.unity
   - Assets/Scenes/Main.unity
   playerPath: C:/Users/Josh/Desktop/ARENA BUILD/Arena TBD.exe
