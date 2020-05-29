@@ -8,6 +8,9 @@ public class DealDamage : NetworkBehaviour
 
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
+    public float fireSpellStart = 0f;
+    public float fireSpellCooldown = 1f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +27,9 @@ public class DealDamage : NetworkBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && (Time.time > fireSpellStart + fireSpellCooldown))
         {
+            fireSpellStart = Time.time;
             CmdDoDamage();
         }
     }
