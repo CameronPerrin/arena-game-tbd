@@ -502,7 +502,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98208f1eec43e854db13ac60b0d7531b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameController: {fileID: 0}
   nameText: {fileID: 4003539212886007060}
+  storedName: 
   playerName: 
 --- !u!1 &6465717910380288735
 GameObject:
@@ -551,7 +553,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6465717910380288735}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

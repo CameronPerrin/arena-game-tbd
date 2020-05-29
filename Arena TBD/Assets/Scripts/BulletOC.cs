@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 // BULLET ON COLLISION
-public class BulletOC : MonoBehaviour
+public class BulletOC : NetworkBehaviour
 {
 
     public int dmg = 5;
@@ -18,7 +19,10 @@ public class BulletOC : MonoBehaviour
 
         if (health != null)
         {
-            health.TakeDamage(dmg);
+            if (isLocalPlayer)
+            {
+                health.TakeDamage(dmg);
+            }
         }
         Destroy(gameObject);
     }

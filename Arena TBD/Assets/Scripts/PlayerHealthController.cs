@@ -11,6 +11,14 @@ public class PlayerHealthController : NetworkBehaviour
     public int currentHealth = maxHealth;
     public RectTransform healthbar;
 
+    public void Start()
+    {
+        if(isLocalPlayer)
+        {
+            gameObject.tag = "Host Player";
+        }
+    }
+
 
     public void TakeDamage(int amount)
     {

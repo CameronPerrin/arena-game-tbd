@@ -44,7 +44,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Networking.NetworkManagerHUD
     - UnityEngine.Networking.NetworkTransform
   sceneClasses:
-    Assets/Scenes/Main.unity:
+    Assets/Scenes/Arena.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -890,5 +890,5 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
-  - Assets/Scenes/Main.unity
+  - Assets/Scenes/Arena.unity
   playerPath: C:/Users/Josh/Desktop/ARENA BUILD/Arena TBD.exe
