@@ -17,6 +17,10 @@ public class PlayerHealthController : NetworkBehaviour
         {
             gameObject.tag = "Host Player";
         }
+        else
+        {
+            gameObject.tag = "Connected Player";
+        }
     }
 
 
