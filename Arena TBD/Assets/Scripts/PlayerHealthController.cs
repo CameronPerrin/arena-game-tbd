@@ -15,6 +15,9 @@ public class PlayerHealthController : NetworkBehaviour
     [SyncVar]
     public bool isActive = true;
 
+    [SyncVar]
+    public string pTag = "Player";
+
     void Start()
     {
         if (isLocalPlayer)
@@ -30,6 +33,12 @@ public class PlayerHealthController : NetworkBehaviour
         isActive = active;
     }
 
+    [Command]
+    public void CmdShowTag(string playerTag)
+    {
+        pTag = playerTag;
+    }
+
 
     public void TakeDamage(int amount)
     {
@@ -40,17 +49,24 @@ public class PlayerHealthController : NetworkBehaviour
         currentHealth -= amount;
         if (currentHealth <= 0)
         {
-            Debug.Log("Going through");
-            //gameObject.tag = "Dead";
-            //CmdAppearVisible(false);
-            currentHealth = maxHealth;
-            RpcRespawn();
+            CmdShowTag("Dead");
+            CmdAppearVisible(false);
+            //currentHealth = maxHealth;
+            //RpcRespawn();
         }
     }
 
     void Update()
     {
-        //activeComponents();
+        activeComponents();
+
+        if(GameObject.FindGameObjectsWithTag("Player").Length <= 1 && GameObject.FindGameObjectsWithTag("Dead").Length >= 1)
+        {
+            CmdShowTag("Player");
+            CmdAppearVisible(true);
+            currentHealth = maxHealth;
+            RpcRespawn();
+        }
     }
 
     void activeComponents()
@@ -59,6 +75,7 @@ public class PlayerHealthController : NetworkBehaviour
         transform.GetChild(0).gameObject.SetActive(isActive);
         gameObject.GetComponent<Movement>().enabled = isActive;
         gameObject.GetComponent<DealDamage>().enabled = isActive;
+        gameObject.tag = pTag;
     }
 
     void OnChangeHealth(int health)
