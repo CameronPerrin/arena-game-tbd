@@ -4,10 +4,12 @@ ScriptsOnlyBuild:
     - Billboard
     - BulletOC
     - CameraController
+    - CooldownController
     - DealDamage
     - Movement
     - PlayerHealthController
     - PlayerNameHandler
+    - RotationLock
     - SpikeTrapController
     - StartGame
     Unity.Rider.Editor.dll:
@@ -83,39 +85,43 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11258}
+      Script: {instanceID: 12272}
     - Class: 114
-      Script: {instanceID: 11260}
+      Script: {instanceID: 12274}
     - Class: 114
-      Script: {instanceID: 11326}
+      Script: {instanceID: 12340}
     - Class: 114
-      Script: {instanceID: 11482}
-    - Class: 114
-      Script: {instanceID: 11518}
-    - Class: 114
-      Script: {instanceID: 11568}
-    - Class: 114
-      Script: {instanceID: 11582}
-    - Class: 114
-      Script: {instanceID: 12348}
-    - Class: 114
-      Script: {instanceID: 12412}
+      Script: {instanceID: 12496}
     - Class: 114
       Script: {instanceID: 12532}
     - Class: 114
-      Script: {instanceID: 12624}
+      Script: {instanceID: 12582}
     - Class: 114
-      Script: {instanceID: 12708}
+      Script: {instanceID: 12596}
     - Class: 114
-      Script: {instanceID: 13032}
+      Script: {instanceID: 13362}
     - Class: 114
-      Script: {instanceID: 13078}
+      Script: {instanceID: 13426}
     - Class: 114
-      Script: {instanceID: 13336}
+      Script: {instanceID: 13528}
     - Class: 114
-      Script: {instanceID: 13438}
+      Script: {instanceID: 13546}
     - Class: 114
-      Script: {instanceID: 13478}
+      Script: {instanceID: 13638}
+    - Class: 114
+      Script: {instanceID: 13722}
+    - Class: 114
+      Script: {instanceID: 13828}
+    - Class: 114
+      Script: {instanceID: 14044}
+    - Class: 114
+      Script: {instanceID: 14090}
+    - Class: 114
+      Script: {instanceID: 14348}
+    - Class: 114
+      Script: {instanceID: 14450}
+    - Class: 114
+      Script: {instanceID: 14490}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -127,10 +133,6 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 198
-      Script: {instanceID: 0}
-    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -164,33 +166,33 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11258}
+      Script: {instanceID: 12272}
     - Class: 114
-      Script: {instanceID: 11470}
+      Script: {instanceID: 12484}
     - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 12532}
     - Class: 114
-      Script: {instanceID: 11994}
+      Script: {instanceID: 13008}
     - Class: 114
-      Script: {instanceID: 12028}
+      Script: {instanceID: 13042}
     - Class: 114
-      Script: {instanceID: 12494}
+      Script: {instanceID: 13508}
     - Class: 114
-      Script: {instanceID: 12720}
+      Script: {instanceID: 13734}
     - Class: 114
-      Script: {instanceID: 12758}
+      Script: {instanceID: 13772}
     - Class: 114
-      Script: {instanceID: 12776}
+      Script: {instanceID: 13790}
     - Class: 114
-      Script: {instanceID: 13000}
+      Script: {instanceID: 14012}
     - Class: 114
-      Script: {instanceID: 13078}
+      Script: {instanceID: 14090}
     - Class: 114
-      Script: {instanceID: 13254}
+      Script: {instanceID: 14266}
     - Class: 114
-      Script: {instanceID: 13478}
+      Script: {instanceID: 14490}
     - Class: 114
-      Script: {instanceID: 13514}
+      Script: {instanceID: 14526}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -914,4 +916,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Arena.unity
-  playerPath: C:/Users/Josh/Desktop/ARENA BUILD/Arena TBD.exe
+  playerPath: C:/Users/Cameron_Desktop/Downloads/Arena TBD.exe

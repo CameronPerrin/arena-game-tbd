@@ -69,12 +69,14 @@ public class PlayerHealthController : NetworkBehaviour
         }
     }
 
-    void activeComponents()
+ 	void activeComponents()
     {
         GetComponent<Renderer>().enabled = isActive;
         transform.GetChild(0).gameObject.SetActive(isActive);
+        GetComponent<Collider>().isTrigger = !isActive;
         gameObject.GetComponent<Movement>().enabled = isActive;
         gameObject.GetComponent<DealDamage>().enabled = isActive;
+        gameObject.GetComponent<Rigidbody>().useGravity = isActive;
         gameObject.tag = pTag;
     }
 
