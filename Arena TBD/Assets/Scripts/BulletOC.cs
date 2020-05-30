@@ -8,7 +8,8 @@ using UnityEngine.Networking;
 public class BulletOC : NetworkBehaviour
 {
     public int dmg = 5;
-
+    public float tiltAroundX;
+    public float tiltAroundZ;
     void OnTriggerEnter(Collider collision)
     {
         GameObject hit = collision.gameObject;
@@ -25,5 +26,13 @@ public class BulletOC : NetworkBehaviour
         gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
         gameObject.GetComponent<Rigidbody>().useGravity = false;
         //Destroy(gameObject);
+    }
+
+    void Update(){
+        tiltAroundX += 2;
+        tiltAroundZ += 2;
+        //rotationVector.z += 0;
+        Quaternion target = Quaternion.Euler(tiltAroundX, 0, tiltAroundZ);
+        gameObject.transform.rotation = target;
     }
 }
