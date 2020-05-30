@@ -35,7 +35,6 @@ public class PlayerNameHandler : NetworkBehaviour
     {
         if (nameText.GetComponent<TextMesh>().text != playerName)
         {
-            Debug.Log("Name changed");
             nameText.GetComponent<TextMesh>().text = playerName;
         }
     }

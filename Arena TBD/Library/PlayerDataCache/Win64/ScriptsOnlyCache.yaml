@@ -42,6 +42,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Networking.NetworkIdentity
     - UnityEngine.Networking.NetworkManager
     - UnityEngine.Networking.NetworkManagerHUD
+    - UnityEngine.Networking.NetworkStartPosition
     - UnityEngine.Networking.NetworkTransform
   sceneClasses:
     Assets/Scenes/Arena.unity:
@@ -97,6 +98,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13328}
     - Class: 114
       Script: {instanceID: 13446}
+    - Class: 114
+      Script: {instanceID: 13538}
     - Class: 114
       Script: {instanceID: 13622}
     - Class: 114
@@ -613,7 +616,7 @@ ScriptsOnlyBuild:
     className: NetworkStartPosition
   - hash:
       serializedVersion: 2
-      Hash: 08e71239e16769f5ca191b7d1a764403
+      Hash: 4a36960fa9df1f325e38d05f86311b02
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DealDamage
@@ -703,7 +706,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 80b3ebef4a017428ad6602cb4dcd0fcb
+      Hash: 830d091f49431822486e4e54d9e5a618
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerHealthController
@@ -891,4 +894,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Arena.unity
-  playerPath: C:/Users/Cameron_Desktop/Downloads/Arena TBD.exe
+  playerPath: C:/Users/Josh/Desktop/ARENA BUILD/Arena TBD.exe

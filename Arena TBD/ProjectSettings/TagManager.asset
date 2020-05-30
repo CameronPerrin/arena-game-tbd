@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Host Player
   - Connected Player
+  - Dead
   layers:
   - Default
   - TransparentFX
