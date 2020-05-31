@@ -190,7 +190,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.51
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &6558006617989041328
 Rigidbody:
@@ -276,6 +276,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impactVFX: {fileID: 4520294814067723373, guid: 319954862861bc548b6f2bb1e7f31751,
+    type: 3}
+  crackVFX: {fileID: 2716009401154364805, guid: 72ddfe0dca1b0754ea9aaf1863ed90e0,
     type: 3}
   dmg: 34
   tiltAroundX: 0

@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - DealDamage
     - MenuRotation
     - Movement
+    - ParticleDestroy
     - PlayerHealthController
     - PlayerNameHandler
     - RotationLock
@@ -88,43 +89,45 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11256}
+      Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 11258}
+      Script: {instanceID: 11272}
     - Class: 114
-      Script: {instanceID: 11324}
+      Script: {instanceID: 11276}
     - Class: 114
-      Script: {instanceID: 11480}
+      Script: {instanceID: 11302}
     - Class: 114
-      Script: {instanceID: 11516}
+      Script: {instanceID: 11522}
     - Class: 114
-      Script: {instanceID: 11566}
+      Script: {instanceID: 11558}
     - Class: 114
-      Script: {instanceID: 11580}
+      Script: {instanceID: 11608}
     - Class: 114
-      Script: {instanceID: 12348}
+      Script: {instanceID: 11622}
     - Class: 114
-      Script: {instanceID: 12412}
+      Script: {instanceID: 12390}
     - Class: 114
-      Script: {instanceID: 12514}
+      Script: {instanceID: 12454}
     - Class: 114
-      Script: {instanceID: 12532}
+      Script: {instanceID: 12556}
     - Class: 114
-      Script: {instanceID: 12624}
+      Script: {instanceID: 12574}
     - Class: 114
-      Script: {instanceID: 12708}
+      Script: {instanceID: 12666}
     - Class: 114
-      Script: {instanceID: 12816}
+      Script: {instanceID: 12750}
     - Class: 114
-      Script: {instanceID: 13034}
+      Script: {instanceID: 12858}
     - Class: 114
-      Script: {instanceID: 13080}
+      Script: {instanceID: 13120}
     - Class: 114
-      Script: {instanceID: 13338}
-    - Class: 114
-      Script: {instanceID: 13440}
+      Script: {instanceID: 13378}
     - Class: 114
       Script: {instanceID: 13480}
+    - Class: 114
+      Script: {instanceID: 13520}
+    - Class: 114
+      Script: {instanceID: 33840}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -173,35 +176,35 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11256}
+      Script: {instanceID: 11302}
     - Class: 114
-      Script: {instanceID: 11468}
+      Script: {instanceID: 11510}
     - Class: 114
-      Script: {instanceID: 11516}
+      Script: {instanceID: 11558}
     - Class: 114
-      Script: {instanceID: 11992}
+      Script: {instanceID: 12034}
     - Class: 114
-      Script: {instanceID: 12026}
+      Script: {instanceID: 12068}
     - Class: 114
-      Script: {instanceID: 12030}
+      Script: {instanceID: 12072}
     - Class: 114
-      Script: {instanceID: 12494}
+      Script: {instanceID: 12536}
     - Class: 114
-      Script: {instanceID: 12720}
+      Script: {instanceID: 12762}
     - Class: 114
-      Script: {instanceID: 12758}
+      Script: {instanceID: 12800}
     - Class: 114
-      Script: {instanceID: 12776}
+      Script: {instanceID: 12818}
     - Class: 114
-      Script: {instanceID: 13002}
+      Script: {instanceID: 13044}
     - Class: 114
-      Script: {instanceID: 13080}
+      Script: {instanceID: 13120}
     - Class: 114
-      Script: {instanceID: 13256}
+      Script: {instanceID: 13296}
     - Class: 114
-      Script: {instanceID: 13480}
+      Script: {instanceID: 13520}
     - Class: 114
-      Script: {instanceID: 13516}
+      Script: {instanceID: 13556}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -221,6 +224,24 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
+      Hash: 2c9b2d49ef221df868a10d66d17ac671
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerHealthController
+  - hash:
+      serializedVersion: 2
+      Hash: bb7a71457205bd25c20e5037fec7e80a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Movement
+  - hash:
+      serializedVersion: 2
+      Hash: 184c6458416f61e7a46779ecfe038676
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraController
+  - hash:
+      serializedVersion: 2
       Hash: a1f19ad47d3094e235f21b74dfc423a8
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -231,12 +252,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
-  - hash:
-      serializedVersion: 2
-      Hash: bb7a71457205bd25c20e5037fec7e80a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Movement
   - hash:
       serializedVersion: 2
       Hash: 726fcf7961cbb4108aa5be5e55b8c8bf
@@ -267,12 +282,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
-  - hash:
-      serializedVersion: 2
-      Hash: 184c6458416f61e7a46779ecfe038676
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CameraController
   - hash:
       serializedVersion: 2
       Hash: 71f7f12b8d0f4fd73590db8bcb6d453c
@@ -377,7 +386,7 @@ ScriptsOnlyBuild:
     className: NetworkTransform
   - hash:
       serializedVersion: 2
-      Hash: 1ca0a86c9713097c87a4e609c0aebcd9
+      Hash: bd66372f196b0b6095540bcdfad1eab0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BulletOC
@@ -749,12 +758,6 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 2c9b2d49ef221df868a10d66d17ac671
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerHealthController
-  - hash:
-      serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -933,8 +936,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 054c11ebe7357ca64685056210b17e5a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ParticleDestroy
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Arena.unity
-  playerPath: C:/Users/Cameron_Desktop/Downloads/Arena TBD.exe
+  playerPath: C:/Users/Josh/Desktop/ARENA BUILD/Arena TBD.exe

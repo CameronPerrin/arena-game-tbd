@@ -7,32 +7,48 @@ using UnityEngine.Networking;
 public class BulletOC : NetworkBehaviour
 {
     public GameObject impactVFX;
+    public GameObject crackVFX;
     public int dmg = 5;
     public float tiltAroundX;
     public float tiltAroundZ;
     public float tiltAroundY;
     public bool doExpand = false; 
-    public bool doShrink = false; 
+    public bool doShrink = false;
+    private bool hitAlready = false;
     void OnTriggerEnter(Collider collision)
     {
         GameObject hit = collision.gameObject;
         PlayerHealthController health = hit.GetComponent<PlayerHealthController>();
 
-        // When this collides with something, spawn VFX
-        Instantiate(impactVFX, new Vector3(transform.position.x, transform.position.y + 0.6f, transform.position.z), transform.rotation);
-
         if (health != null && hit.tag == "Player")
-        {   
-                health.TakeDamage(dmg);
-                //hit.GetComponent<Rigidbody>().AddForce(transform.forward * 500f);
-                hit.GetComponent<Rigidbody>().AddForce(transform.up * 750f);
-        }
-        //gameObject.transform.localScale = new Vector3(8f, 8f, 8f);
-        gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
-        gameObject.GetComponent<Rigidbody>().useGravity = false;
-        doExpand = true;
+        {
+            hitAlready = true;
+            health.TakeDamage(dmg);
+            //hit.GetComponent<Rigidbody>().AddForce(transform.forward * 500f);
+            hit.GetComponent<Rigidbody>().AddForce(transform.up * 750f);
 
-        //Destroy(gameObject);
+            // When this collides with something, spawn VFX
+            Instantiate(impactVFX, new Vector3(transform.position.x, transform.position.y + 0.6f, transform.position.z), transform.rotation);    
+        }
+
+        if (hitAlready == false)
+        {
+            hitAlready = true;
+            // When this collides with something, spawn VFX
+            Instantiate(impactVFX, new Vector3(transform.position.x, transform.position.y + 0.6f, transform.position.z), transform.rotation);
+
+            if (hit.tag == "Ground")
+            {
+                Instantiate(crackVFX, new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z), transform.rotation);
+            }
+            //gameObject.transform.localScale = new Vector3(8f, 8f, 8f);
+            gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
+            gameObject.GetComponent<Rigidbody>().useGravity = false;
+            doExpand = true;
+
+            //Destroy(gameObject);
+        }
+        
     }
 
     void Update(){
@@ -47,7 +63,7 @@ public class BulletOC : NetworkBehaviour
     }
 
     void expandDong(){
-        if(doExpand){
+        if (doExpand){
             gameObject.transform.localScale += new Vector3(0.3f, 0.3f, 0.3f);
         }
         if(gameObject.transform.localScale.x > 10f){
