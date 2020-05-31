@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-
 // BULLET ON COLLISION
 public class BulletOC : NetworkBehaviour
 {
+    public GameObject impactVFX;
     public int dmg = 5;
     public float tiltAroundX;
     public float tiltAroundZ;
@@ -18,6 +18,8 @@ public class BulletOC : NetworkBehaviour
         GameObject hit = collision.gameObject;
         PlayerHealthController health = hit.GetComponent<PlayerHealthController>();
 
+        // When this collides with something, spawn VFX
+        Instantiate(impactVFX, new Vector3(transform.position.x, transform.position.y + 0.6f, transform.position.z), transform.rotation);
 
         if (health != null && hit.tag == "Player")
         {   

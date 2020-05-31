@@ -275,9 +275,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d7173211e0851419ca7a5803a0a615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  impactVFX: {fileID: 4520294814067723373, guid: 319954862861bc548b6f2bb1e7f31751,
+    type: 3}
   dmg: 34
   tiltAroundX: 0
   tiltAroundZ: 0
+  tiltAroundY: 0
   doExpand: 0
   doShrink: 0
 --- !u!1001 &3292600331751284619
