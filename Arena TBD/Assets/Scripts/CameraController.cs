@@ -7,6 +7,7 @@ public class CameraController : NetworkBehaviour
 {
     private GameObject mainCam;
     public float xPosition, yPosition, zPosition;
+    public float offset;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,8 @@ public class CameraController : NetworkBehaviour
 
     private void cameraMove()
     {
-        mainCam.transform.position = this.transform.position + new Vector3(xPosition, yPosition, -zPosition);
-        mainCam.transform.LookAt(this.transform.position);
+        mainCam.transform.position = this.transform.position + new Vector3(xPosition, yPosition, (-zPosition-offset));
+
+        mainCam.transform.LookAt((this.transform.position - new Vector3(0,0,offset)));
     }
 }

@@ -439,6 +439,7 @@ MonoBehaviour:
   xPosition: 0
   yPosition: 10
   zPosition: 10
+  offset: 5
 --- !u!114 &6692620929924044387
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ public class Movement : NetworkBehaviour
     void Start()
     {
 		rb = GetComponent<Rigidbody>();
-		jump = new Vector3(0.0f, 2.0f, 0.0f);
+		jump = new Vector3(0.0f, 3.0f, 0.0f);
     }
 
 	void OnCollisionStay(){
