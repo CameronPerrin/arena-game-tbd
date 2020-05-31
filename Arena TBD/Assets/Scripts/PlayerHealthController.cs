@@ -18,6 +18,9 @@ public class PlayerHealthController : NetworkBehaviour
     [SyncVar]
     public string pTag = "Player";
 
+    [HideInInspector]
+    public float viewDown = 90;
+
     void Start()
     {
         if (isLocalPlayer)
@@ -66,6 +69,15 @@ public class PlayerHealthController : NetworkBehaviour
             CmdAppearVisible(true);
             currentHealth = maxHealth;
             RpcRespawn();
+        }
+        if(isLocalPlayer){
+	        if(gameObject.tag == "Dead"){
+	        	GameObject.Find("Main Camera").transform.position = new Vector3(-2.69f,35.5f,-6.1f);
+
+	        	Quaternion target = Quaternion.Euler(viewDown,0,0);
+        		GameObject.Find("Main Camera").transform.rotation = target;
+	        	//GameObject.Find("Main Camera").transform.rotation = new Quaternion.Euler(0,0,90);
+	        }
         }
     }
 

@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - CameraController
     - CooldownController
     - DealDamage
+    - MenuRotation
     - Movement
     - PlayerHealthController
     - PlayerNameHandler
@@ -87,43 +88,43 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 13050}
+      Script: {instanceID: 11256}
     - Class: 114
-      Script: {instanceID: 13052}
+      Script: {instanceID: 11258}
     - Class: 114
-      Script: {instanceID: 13118}
+      Script: {instanceID: 11324}
     - Class: 114
-      Script: {instanceID: 13274}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 13310}
+      Script: {instanceID: 11516}
     - Class: 114
-      Script: {instanceID: 13360}
+      Script: {instanceID: 11566}
     - Class: 114
-      Script: {instanceID: 13374}
+      Script: {instanceID: 11580}
     - Class: 114
-      Script: {instanceID: 14140}
+      Script: {instanceID: 12348}
     - Class: 114
-      Script: {instanceID: 14204}
+      Script: {instanceID: 12412}
     - Class: 114
-      Script: {instanceID: 14306}
+      Script: {instanceID: 12514}
     - Class: 114
-      Script: {instanceID: 14324}
+      Script: {instanceID: 12532}
     - Class: 114
-      Script: {instanceID: 14416}
+      Script: {instanceID: 12624}
     - Class: 114
-      Script: {instanceID: 14500}
+      Script: {instanceID: 12708}
     - Class: 114
-      Script: {instanceID: 14606}
+      Script: {instanceID: 12816}
     - Class: 114
-      Script: {instanceID: 14822}
+      Script: {instanceID: 13034}
     - Class: 114
-      Script: {instanceID: 14868}
+      Script: {instanceID: 13080}
     - Class: 114
-      Script: {instanceID: 15126}
+      Script: {instanceID: 13338}
     - Class: 114
-      Script: {instanceID: 15228}
+      Script: {instanceID: 13440}
     - Class: 114
-      Script: {instanceID: 15268}
+      Script: {instanceID: 13480}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -172,33 +173,35 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 13050}
+      Script: {instanceID: 11256}
     - Class: 114
-      Script: {instanceID: 13262}
+      Script: {instanceID: 11468}
     - Class: 114
-      Script: {instanceID: 13310}
+      Script: {instanceID: 11516}
     - Class: 114
-      Script: {instanceID: 13786}
+      Script: {instanceID: 11992}
     - Class: 114
-      Script: {instanceID: 13820}
+      Script: {instanceID: 12026}
     - Class: 114
-      Script: {instanceID: 14286}
+      Script: {instanceID: 12030}
     - Class: 114
-      Script: {instanceID: 14512}
+      Script: {instanceID: 12494}
     - Class: 114
-      Script: {instanceID: 14550}
+      Script: {instanceID: 12720}
     - Class: 114
-      Script: {instanceID: 14568}
+      Script: {instanceID: 12758}
     - Class: 114
-      Script: {instanceID: 14790}
+      Script: {instanceID: 12776}
     - Class: 114
-      Script: {instanceID: 14868}
+      Script: {instanceID: 13002}
     - Class: 114
-      Script: {instanceID: 15044}
+      Script: {instanceID: 13080}
     - Class: 114
-      Script: {instanceID: 15268}
+      Script: {instanceID: 13256}
     - Class: 114
-      Script: {instanceID: 15304}
+      Script: {instanceID: 13480}
+    - Class: 114
+      Script: {instanceID: 13516}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -216,12 +219,6 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
-  - hash:
-      serializedVersion: 2
-      Hash: 9d9840f35479dc3b1a3da7988f7d3c39
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LightImprove
   - hash:
       serializedVersion: 2
       Hash: a1f19ad47d3094e235f21b74dfc423a8
@@ -272,7 +269,7 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 291da96d50a76947c9eefec36183a025
+      Hash: 184c6458416f61e7a46779ecfe038676
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraController
@@ -506,6 +503,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
+      Hash: ceaaf693490dfbc984ca79bc7f24243f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuRotation
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -686,6 +689,12 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 9d9840f35479dc3b1a3da7988f7d3c39
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LightImprove
+  - hash:
+      serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -740,7 +749,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 0863341f0eee5ef2298cf7549968dac1
+      Hash: 2c9b2d49ef221df868a10d66d17ac671
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerHealthController
@@ -928,4 +937,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Arena.unity
-  playerPath: C:/Users/Josh/Desktop/ARENA BUILD/Arena TBD.exe
+  playerPath: C:/Users/Cameron_Desktop/Downloads/Arena TBD.exe
