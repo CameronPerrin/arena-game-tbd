@@ -10,6 +10,7 @@ public class BulletOC : NetworkBehaviour
     public int dmg = 5;
     public float tiltAroundX;
     public float tiltAroundZ;
+    public float tiltAroundY;
     public bool doExpand = false; 
     public bool doShrink = false; 
     void OnTriggerEnter(Collider collision)
@@ -33,10 +34,12 @@ public class BulletOC : NetworkBehaviour
     }
 
     void Update(){
-        tiltAroundX += 2;
-        tiltAroundZ += 8;
+
+        //tiltAroundX += 2;
+        //tiltAroundZ += 8;
+        tiltAroundY += 8;
         //rotationVector.z += 0;
-        Quaternion target = Quaternion.Euler(tiltAroundX, 0, tiltAroundZ);
+        Quaternion target = Quaternion.Euler(tiltAroundX, tiltAroundY, tiltAroundZ);
         gameObject.transform.rotation = target;
         expandDong();
     }
